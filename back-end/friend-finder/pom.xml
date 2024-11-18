@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.friends</groupId>
-	<artifactId>friends</artifactId>
+	<artifactId>frind-finder</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>friend-fiender</name>
-	<description>Demo project for Spring Boot</description>
+	<description>service about any integration about friend finder</description>
 	<url/>
 	<licenses>
 		<license/>
