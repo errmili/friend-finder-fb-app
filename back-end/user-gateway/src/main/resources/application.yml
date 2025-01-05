@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: user-gateway
+  banner:
+    location: classpath:/banners/banner.txt
+server:
+  port: 9092
+
+zuul:
+  routes:
+    user-management:
+      path: /user-api/**
+      url: http://localhost:9095/

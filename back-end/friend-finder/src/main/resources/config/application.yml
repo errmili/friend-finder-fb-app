@@ -1,0 +1,66 @@
+spring:
+  application:
+    name: ${SPRING.APP.NAME:friend-finder-service}
+  banner:
+    location: ${SPRING.BANNER:classpath:/banners/banner.txt}
+    security:
+      user:
+        name: jad
+        password: jad
+    messages:
+      basename: i18n/messages
+      local-default:
+
+server:
+  port: ${SERVER.PORT:9090}
+
+# ===============================
+# = SPRING DATABASE
+# ===============================
+datasource:
+  driverClassName: ${DATASOURCE.DRIVER.NAME:com.microsoft.sqlserver.jdbc.SQLServerDriver}
+  databaseUrl: ${DATASOURCE.DATABASE.URL:jdbc:sqlserver://localhost;DatabaseName=friend-finder;characterEncoding=UTF-8;encrypt=false}
+  databaseUser: ${DATASOURCE.USER.NAME:ja}
+  databasePassword: ${DATASOURCE.USER.PASSWORD:jad}
+  platform: ${DATASOURCE.PLATFORM:org.hibernate.dialect.SQLServer2012Dialect}
+
+# ===============================
+# = JPA / HIBERNATE
+# ===============================
+jpa:
+  showSql: ${JPA.SHOW_SQL:true}
+  hibernate:
+    hibernateDDLAuto: ${JPA.HIBERNATE.DDL.AUTO:none}
+    hibernateDialect: ${JPA.HIBERNATE.DIALECT:org.hibernate.dialect.SQLServer2012Dialect}
+    create_empty_composites:
+      enabled: ${JPA.HIBERNATE.EMPTY.COMPOSITES:true}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/friendfinder-system?useSSL=false&useUnicode=yes&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&serverTimezone=UTC
+#    username: root
+#    password: root
+#  jpa:
+#    properties:
+#      hibernate:
+#        hbm2ddl:
+#          auto: update
+#        dialect: org.hibernate.dialect.MySQL5Dialect
+#server:
+#  port: 8081
+#
+# JDBC properties

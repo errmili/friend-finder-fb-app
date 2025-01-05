@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: ${SPRING.APP.NAME:user-management}
+  banner:
+    location: ${SPRING.BANNER:classpath:/banners/banner.txt}
+  security:
+      user:
+        name: jad
+        password: jad
+  messages:
+      basename: i18n/messages
+      local-default:
+
+server:
+  port: ${SERVER.PORT:9095}
+
+# ===============================
+# = SPRING DATABASE
+# ===============================
+datasource:
+  driverClassName: ${DATASOURCE.DRIVER.NAME:com.microsoft.sqlserver.jdbc.SQLServerDriver}
+  databaseUrl: ${DATASOURCE.DATABASE.URL:jdbc:sqlserver://localhost;DatabaseName=ff_user_management;characterEncoding=UTF-8;encrypt=false}
+# new date => databaseUrl: ${DATASOURCE.DATABASE.URL:jdbc:sqlserver://localhost;DatabaseName=user_management;characterEncoding=UTF-8;encrypt=false}
+  databaseUser: ${DATASOURCE.USER.NAME:JA}
+  databasePassword: ${DATASOURCE.USER.PASSWORD:JAD}
+  platform: ${DATASOURCE.PLATFORM:org.hibernate.dialect.SQLServer2012Dialect}
+# ===============================
+# = JPA / HIBERNATE
+# ===============================
+jpa:
+  showSql: ${JPA.SHOW_SQL:true}
+  hibernate:
+    hibernateDDLAuto: ${JPA.HIBERNATE.DDL.AUTO:none}
+    hibernateDialect: ${JPA.HIBERNATE.DIALECT:org.hibernate.dialect.SQLServer2012Dialect}
+    create_empty_composites:
+      enabled: ${JPA.HIBERNATE.EMPTY.COMPOSITES:true}
+
+user-management:
+    token:
+      secret: dshfksdjhk#$^sfddsmnmcfdmn_++#@$fsdfmns,fs@$RGDSF$@%<<<.hfh
+      access-token-time: 5h
+      refresh-token-time: 2h

@@ -1,5 +1,5 @@
 package com.spring.friends.model;
-
+import com.spring.commonlib.model.BaseEntity;
 
 import javax.persistence.*;
 import lombok.*;
@@ -20,7 +20,7 @@ public class Post extends BaseEntity{
     private String text;
 
     @Column(name = "likes")
-    private  int like;
+    private int likes;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

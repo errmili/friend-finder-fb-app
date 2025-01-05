@@ -1,5 +1,6 @@
 package com.spring.friends.model;
 
+import com.spring.commonlib.model.BaseEntity;
 
 import javax.persistence.*;
 import lombok.*;
